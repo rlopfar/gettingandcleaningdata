@@ -20,3 +20,11 @@ R project instruction
 > 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 > 
 > Good luck!
+
+Reproduce this project
+-------------------------------
+
+1. Open the R script `run_analysis.r` in your R programs.
+2. Run it
+3. It create a tidy dataset file `tidy.txt`
+4. And the Codebook file `codebook.md`

@@ -24,7 +24,7 @@ test  <- (data.table(read.table(file.path(pathIn, "test" , "X_test.txt" ))))
 
 #1 Crate 1 set
 
-#Merge rows 
+##Merge rows 
 
 subject <- rbind(strain, stest)
 setnames(subject, "V1", "subject")
@@ -34,7 +34,7 @@ setnames(activity, "V1", "aNum")
 
 dt <- rbind(train, test)
 
-#Merge Columns
+##Merge Columns
 subject <- cbind(subject, activity)
 dt <- cbind(subject, dt)
 
@@ -80,10 +80,10 @@ dtTidy <- dt[, list(count = .N, average = mean(value)), by=key(dt)]
 setnames(dtTidy, c("Subject", "Activity","Variable","Count","Average"))
 
 
-#Write results in table
+##Write results in table
 
 write.table(dtTidy, file = "tidy.txt", sep = "\t\t", row.name=FALSE)
 
-#Make Codebook
+##Make Codebook
 
 knit("run_analysis.R", output="codebook.md", encoding="ISO8859-1", quiet=TRUE)
